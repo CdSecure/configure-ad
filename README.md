@@ -106,47 +106,46 @@ Review and Create:
 <br />
 <img width="1182" alt="Screenshot 2024-11-08 at 4 17 45 PM" src="https://github.com/user-attachments/assets/45af1317-6db7-4ed7-97b1-efb717ed52ba">
 
-
 Creating the Windows 10 Virtual Machine
 
-Now that the domain controller (Windows Server) is set up, we will proceed to create a Windows 10 virtual machine (VM) and ensure it is properly configured within the same environment.
+Now that the domain controller (Windows Server) is set up, create a Windows 10 VM in the same resource group and region:
 
-1. Navigate to the Virtual Machines Portal:
-   - In the Azure portal, go to Virtual Machines.
+1. Start VM Creation:
 
-2. Create a New Virtual Machine:
-   - Click on **Add** to start creating a new VM.
-   - **Resource Group:** Ensure the new VM is assigned to the **same resource group** as your domain controller.
-   - **Region:** Confirm that the **region** is the same as the one used for the domain controller (e.g., **US West 2**).
+- Navigate to Virtual Machines in the Azure portal.
 
-3. **Configure Basic Settings:**
-   - **Virtual Machine Name:** Provide a meaningful name for your Windows 10 VM.
-   - **Image:**
-     - Click on the **Image** dropdown and select **Windows 10 Pro**.
-   - **Size:**
-     - Choose a VM size that has **2 or more vCPUs** to meet performance requirements.
-   - **Administrator Account:**
-     - **Username:** Create a username for the VM administrator.
-     - **Password:** Set a strong password. **Make sure to remember these credentials**, as you will need them to log into the VM later.
+- Click Add to begin creating a new VM.
 
-4. **Networking Configuration:**
-   - Navigate to the **Networking** tab.
-   - **Virtual Network (VNet):**
-     - Ensure the VM is connected to the **same virtual network** you created earlier.
-   - **Subnet:**
-     - Select the appropriate **subnet** for the Windows 10 VM. This could be a different subnet from the domain controller but within the same VNet.
 
-5. **Review and Create:**
-   - Review all your settings to ensure everything is configured correctly.
-   - Click on **Review + Create** to validate the configuration.
-   - Once validation passes, click on **Create** to deploy the VM.
+2. Configure Basics:
 
-6. **Post-Deployment:**
-   - After the VM is deployed, you can access it using the credentials you set.
-   - Remember to **keep your username and password secure** for future access.
+- Resource Group: Select the same one used for the domain controller.
 
-<p>
+- Region: Ensure it's the same as the domain controller's region.
+VM Name: Choose a name for your Windows 10 VM.
+
+- Image: Select Windows 10 Pro.
+  
+- Size: Pick a size with 2 or more vCPUs.
+  
+- Administrator Credentials: Set a username and password—remember these for later access.
+
+3. Networking:
+
+- In the Networking tab, select the same Virtual Network (VNet) you created earlier.
+  
+- Choose the appropriate subnet for the Windows 10 VM.
+  
+4. Review and Create:
+
+- Verify all settings are correct.
+
+- Click Review + Create, then Create to deploy the VM.
+
 <img width="993" alt="Screenshot 2024-11-08 at 4 36 02 PM" src="https://github.com/user-attachments/assets/3b2348d9-7e0b-4c29-88d9-3420c25f3a1f">
+
+<img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/4bfe1db6-9fd3-4d76-9428-e36f251640e5">
+
 
 </p>
 <p>
