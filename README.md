@@ -106,7 +106,47 @@ Review and Create:
 <br />
 <img width="1182" alt="Screenshot 2024-11-08 at 4 17 45 PM" src="https://github.com/user-attachments/assets/45af1317-6db7-4ed7-97b1-efb717ed52ba">
 
+
+Creating the Windows 10 Virtual Machine
+
+Now that the domain controller (Windows Server) is set up, we will proceed to create a Windows 10 virtual machine (VM) and ensure it is properly configured within the same environment.
+
+1. Navigate to the Virtual Machines Portal:
+   - In the Azure portal, go to Virtual Machines.
+
+2. Create a New Virtual Machine:
+   - Click on **Add** to start creating a new VM.
+   - **Resource Group:** Ensure the new VM is assigned to the **same resource group** as your domain controller.
+   - **Region:** Confirm that the **region** is the same as the one used for the domain controller (e.g., **US West 2**).
+
+3. **Configure Basic Settings:**
+   - **Virtual Machine Name:** Provide a meaningful name for your Windows 10 VM.
+   - **Image:**
+     - Click on the **Image** dropdown and select **Windows 10 Pro**.
+   - **Size:**
+     - Choose a VM size that has **2 or more vCPUs** to meet performance requirements.
+   - **Administrator Account:**
+     - **Username:** Create a username for the VM administrator.
+     - **Password:** Set a strong password. **Make sure to remember these credentials**, as you will need them to log into the VM later.
+
+4. **Networking Configuration:**
+   - Navigate to the **Networking** tab.
+   - **Virtual Network (VNet):**
+     - Ensure the VM is connected to the **same virtual network** you created earlier.
+   - **Subnet:**
+     - Select the appropriate **subnet** for the Windows 10 VM. This could be a different subnet from the domain controller but within the same VNet.
+
+5. **Review and Create:**
+   - Review all your settings to ensure everything is configured correctly.
+   - Click on **Review + Create** to validate the configuration.
+   - Once validation passes, click on **Create** to deploy the VM.
+
+6. **Post-Deployment:**
+   - After the VM is deployed, you can access it using the credentials you set.
+   - Remember to **keep your username and password secure** for future access.
+
 <p>
+<img width="993" alt="Screenshot 2024-11-08 at 4 36 02 PM" src="https://github.com/user-attachments/assets/3b2348d9-7e0b-4c29-88d9-3420c25f3a1f">
 
 </p>
 <p>
