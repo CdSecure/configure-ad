@@ -25,17 +25,38 @@ In this exercise, we will create a resource group containing a virtual network w
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Creating a Resource Group in Microsoft Azure
+
+Open the Azure Portal:
+
+- Navigate to the Microsoft Azure portal and sign in with your credentials.
+Create a New Resource Group:
+
+- In the Azure portal, select Resource Groups from the left-hand menu or use the search bar at the top to find Resource Groups.
+  
+- Click on Add or Create to begin creating a new resource group.
+Subscription: Ensure the correct subscription is selected.
+
+- Resource Group Name: Enter a meaningful name for your resource group.
+  
+- Region: I choose US West 2 as the region for this exercise.
+  
+- Click Review + Create, then click Create to finalize the resource group creation.
+
+<img width="689" alt="Screenshot 2024-11-08 at 3 36 43 PM" src="https://github.com/user-attachments/assets/51b72541-ce24-4a68-8a57-d1f895818bed">
+  
 </p>
 <br />
+
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
