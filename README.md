@@ -101,20 +101,15 @@ Review and Create:
 - After the VM is deployed, keep your administrator username and password handy, as you will need them to log into the VM.
 
 <img width="1183" alt="Screenshot 2024-11-08 at 4 12 05 PM" src="https://github.com/user-attachments/assets/184ec7cc-3ed8-4784-a61e-3f6bd096237e">
-
-<img width="1184" alt="Screenshot 2024-11-08 at 4 15 27 PM" src="https://github.com/user-attachments/assets/08daecb7-abcf-4855-8e6b-4cfa501f7338">
-
-- 
-  
-</p>
 <br />
-
-
+<img width="1184" alt="Screenshot 2024-11-08 at 4 15 27 PM" src="https://github.com/user-attachments/assets/08daecb7-abcf-4855-8e6b-4cfa501f7338">
+<br />
+<img width="1182" alt="Screenshot 2024-11-08 at 4 17 45 PM" src="https://github.com/user-attachments/assets/45af1317-6db7-4ed7-97b1-efb717ed52ba">
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
 </p>
 <br />
