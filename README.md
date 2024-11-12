@@ -231,6 +231,51 @@ This ensures the firewall is disabled across all network profiles.
 
 <img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/eb109ec5-4b47-4d9f-8c37-28c6d1213f03">
 
+Configuring the Client VM to Use the Domain Controller's Private IP Address as Its DNS Server
+
+We will now configure the client VM (the second VM) to use the domain controller's (DC-1's) private IP address as its DNS server. This is essential for the client VM to locate and join the domain controlled by DC-1.
+
+Steps:
+
+1. Retrieve the Domain Controller's Private IP Address:
+
+- Navigate to DC-1 in Azure:
+- Go to the Azure portal and select your domain controller VM (DC-1).
+- Find the Private IP Address:
+- In the Overview section or under Networking, locate the Private IP address.
+- Note down this IP address; you will need it for the next steps.
+  
+2. Access the Client VM's Network Interface Settings:
+
+- Navigate to Client-1 in Azure:
+- In the Azure portal, select your client VM (Client-1).
+- Go to Networking Settings:
+- In the left-hand menu, click on Networking under Settings.
+- Access the Network Interface:
+- Under the Network interface section, click on the name of the network interface associated with Client to open its settings.
+  
+3. Configure DNS Server Settings:
+
+- Select DNS Servers:
+- In the network interface settings, select DNS servers from the left-hand menu.
+- Change DNS Server Configuration:
+- You will see that the DNS server is set to "Inherit from virtual network" by default.
+- Change this setting to "Custom".
+- Enter the Domain Controller's IP Address:
+- In the DNS server field that appears, enter the private IP address of DC-1 that you noted earlier.
+- This tells the client VM to use the domain controller as its DNS server.
+  
+4. Save the Changes:
+
+- Apply the Configuration:
+- Click on Save to apply the new DNS server settings to the client VM's network interface.
+  
+5. Restart the Client VM (Optional but Recommended):
+
+- Ensure Settings Take Effect:
+- To make sure the new DNS settings are applied, you may need to restart the Client-1 VM.
+- In the Azure portal, select the client VM, click on Restart, and confirm when prompted.
+
 
 
 </p>
