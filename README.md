@@ -146,6 +146,49 @@ VM Name: Choose a name for your Windows 10 VM.
 
 <img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/4bfe1db6-9fd3-4d76-9428-e36f251640e5">
 
+Setting the Domain Controller's Private IP Address to Static
+
+ After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
+
+1. Navigate to the Domain Controller VM:
+
+- In the Azure portal, go to the Virtual Machines section.
+- Select the Windows Server VM that serves as your domain controller.
+  
+2. Access Networking Settings:
+
+- In the left-hand menu of the VM, click on Networking.
+
+3. Locate the Network Interface:
+
+- Under the Network interface section, note the private IP address assigned to the domain controller.
+- Click on the network interface name to access its settings.
+  
+4. Modify IP Configuration:
+
+- In the network interface settings, select IP configurations from the left-hand menu.
+- You will see the IP configuration labeled ipconfig1 (or similar). Click on it to edit.
+  
+5. Change IP Assignment to Static:
+
+- Under Private IP address settings, you will see Assignment set to Dynamic.
+- Change the Assignment from Dynamic to Static.
+- Ensure the IP address field retains the current IP or adjust it as needed.
+  
+6. Save Changes:
+
+Click Save to apply the changes.
+<img width="1055" alt="Screenshot 2024-11-12 at 11 36 38 AM" src="https://github.com/user-attachments/assets/43629b5a-ac0f-44b3-9ee1-6bcc56e14d01">
+<br />
+<img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/da1ef83e-78ba-4cc1-85b4-704b698889c2">
+<br />
+<img width="1053" alt="Screenshot 2024-11-12 at 11 35 50 AM" src="https://github.com/user-attachments/assets/7de4eff4-f9bc-4d1e-ae70-9962762b37df">
+<br />
+<img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/7150b160-977d-4a38-bb60-0229d80af305">
+
+
+
+
 
 </p>
 <p>
