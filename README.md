@@ -285,7 +285,79 @@ Steps:
 
 <img width="334" alt="Screenshot 2024-11-12 at 12 49 06 PM" src="https://github.com/user-attachments/assets/fc835d24-7763-43b5-bec6-f966a4888823">
 
-<p>
+<img width="957" alt="Screenshot 2024-11-12 at 1 28 45 PM" src="https://github.com/user-attachments/assets/68498027-ca0c-4be7-8255-3e7b471abc9a">
+
+Verifying Connectivity Between Client-1 and the Domain Controller (DC-1)
+
+Now that the domain controller (DC-1) has restarted, we will log into Client-1 and verify connectivity by pinging the domain controller's private IP address. We will also confirm that the DNS settings on Client-1 are correctly configured to use DC-1's private IP address.
+
+Steps:
+1. Obtain Client-1's Public IP Address:
+
+- Navigate to Client-1 in Azure:
+- In the Azure portal, go to Virtual Machines and select Client-1.
+- Copy the Public IP Address:
+- In the Overview section, locate the Public IP address.
+- Copy this IP address for use in the RDP connection.
+  
+2. Log into Client-1 via Remote Desktop Protocol (RDP):
+
+- Open RDP Client:
+- On your local machine, open the Remote Desktop Connection application.
+- Connect to Client-1:
+- Enter Client-1's public IP address in the Computer field.
+- Click Connect.
+- Authenticate:
+- Enter the username and password you created when setting up Client-1.
+- Click OK to log in.
+  
+3. Ping the Domain Controller's Private IP Address from Client-1:
+
+- Obtain DC-1's Private IP Address:
+- In the Azure portal, select DC-1 (your domain controller VM).
+- In the Overview or Networking section, locate and copy the Private IP address.
+- Open PowerShell on Client-1:
+- Click on the Start button (bottom-left corner) and type PowerShell.
+- Open Windows PowerShell.
+- Ping DC-1:
+- In PowerShell, type the following command and press Enter:
+- ping [DC-1's private IP address]
+- Replace [DC-1's private IP address] with the actual IP (e.g., ping 10.0.0.4).
+<br/>
+- Verify Ping Results:
+- Ensure that you receive 4 reply messages indicating successful communication.
+- Successful Ping Example:
+- <img width="858" alt="Screenshot 2024-11-12 at 1 47 12 PM" src="https://github.com/user-attachments/assets/0a019ee3-d58b-4c8e-9ce9-7faee128d8a1">
+<br/>
+- Troubleshooting:
+- If you do not receive replies (e.g., "Request timed out"):
+- Check Network Configuration:
+- Ensure both VMs are in the same Virtual Network (VNet) and appropriate subnets.
+- Firewall Settings:
+- Confirm that the Windows Firewall on DC-1 is disabled or allows ICMP (ping) requests.
+- Refer back to the steps where the firewall was configured on DC-1.
+  
+4. Verify DNS Settings on Client-1:
+
+- In PowerShell on Client-1:
+- Type the following command and press Enter:
+- ipconfig /all
+- Review DNS Server Configuration:
+- Look for the DNS Servers entry under the network adapter in use.
+- Confirm DNS IP address:
+<img width="857" alt="Screenshot 2024-11-12 at 1 59 23 PM" src="https://github.com/user-attachments/assets/66f659d5-62d1-4b5a-89c0-dd889982640a">
+<br/>
+- Troubleshooting DNS Settings:
+- If the DNS server IP does not match DC-1's private IP:
+- Revisit the network interface settings for Client-1 in Azure.
+- Ensure that the DNS server is set to Custom and the IP address is set to DC-1's private IP.
+- Save any changes and restart Client-1 to apply the new settings.
+
+**Summary of Network Configuration and Traffic Observation**
+
+In this exercise, we set up a virtual network in Microsoft Azure with a Windows Server acting as a domain controller and a Windows 10 client machine. We configured static IP addresses and DNS settings to enable seamless domain integration. Using Wireshark, we observed network protocols such as SSH, RDP, DHCP, DNS, and ICMP to gain insights into their behaviors. Additionally, we adjusted firewall settings to control network traffic, enhancing our understanding of network configuration, domain management, and traffic analysis within a virtualized environment.
+
+
 
 </p>
 <br />
