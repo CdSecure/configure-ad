@@ -178,14 +178,13 @@ Setting the Domain Controller's Private IP Address to Static
 6. Save Changes:
 
 Click Save to apply the changes.
-<img width="1055" alt="Screenshot 2024-11-12 at 11 36 38 AM" src="https://github.com/user-attachments/assets/43629b5a-ac0f-44b3-9ee1-6bcc56e14d01">
+<img width="1053" alt="Screenshot 2024-11-12 at 11 35 50 AM" src="https://github.com/user-attachments/assets/2d251fb7-415c-44b1-95e4-411e106b9c47">
 <br />
-<img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/da1ef83e-78ba-4cc1-85b4-704b698889c2">
+<img width="1059" alt="Screenshot 2024-11-12 at 11 36 14 AM" src="https://github.com/user-attachments/assets/052c53b5-3ce2-4c17-a6f6-766b73efe4a6">
 <br />
-<img width="1053" alt="Screenshot 2024-11-12 at 11 35 50 AM" src="https://github.com/user-attachments/assets/7de4eff4-f9bc-4d1e-ae70-9962762b37df">
+<img width="1055" alt="Screenshot 2024-11-12 at 11 36 38 AM" src="https://github.com/user-attachments/assets/ca2a1149-9ea5-4ee2-af16-2777c0c8ac86">
 <br />
-<img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/7150b160-977d-4a38-bb60-0229d80af305">
-
+<img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/55cb1a34-e8f2-4ead-9061-a2c189056c5f">
 
 
 
