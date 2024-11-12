@@ -276,9 +276,15 @@ Steps:
 - To make sure the new DNS settings are applied, you may need to restart the Client-1 VM.
 - In the Azure portal, select the client VM, click on Restart, and confirm when prompted.
 
+<img width="792" alt="Screenshot 2024-11-12 at 12 42 23 PM" src="https://github.com/user-attachments/assets/7407e83d-43e4-40c1-b06b-c6d23d61223e">
 
+<img width="791" alt="Screenshot 2024-11-12 at 12 48 02 PM" src="https://github.com/user-attachments/assets/9fe1570a-97b9-4875-950f-f6b69f4143a5">
+<img width="797" alt="Screenshot 2024-11-12 at 12 48 22 PM" src="https://github.com/user-attachments/assets/23fbd97a-334e-40c9-8e49-dd38c769c6b6">
 
-</p>
+<img width="788" alt="Screenshot 2024-11-12 at 12 48 45 PM" src="https://github.com/user-attachments/assets/0f350b38-7190-4b94-b452-785bca48612f">
+
+<img width="334" alt="Screenshot 2024-11-12 at 12 49 06 PM" src="https://github.com/user-attachments/assets/fc835d24-7763-43b5-bec6-f966a4888823">
+
 <p>
 
 </p>
