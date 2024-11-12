@@ -226,11 +226,10 @@ This ensures the firewall is disabled across all network profiles.
 
 <img width="1800" alt="Screenshot 2024-11-12 at 12 17 58 PM" src="https://github.com/user-attachments/assets/58d6b87d-48a0-4c38-a614-2394418b8d78">
 
-<img width="1800" alt="Screenshot 2024-11-12 at 12 17 43 PM" src="https://github.com/user-attachments/assets/5b73a13c-b301-4b09-b9cf-c73736eb08f9">
-
-<img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/07796346-04f6-4112-a04c-60e7be4f8c98">
+<img width="397" alt="Screenshot 2024-11-12 at 12 21 54 PM" src="https://github.com/user-attachments/assets/0a694894-0222-41c8-a043-80c48f3b9f69">
 
 
+<img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/eb109ec5-4b47-4d9f-8c37-28c6d1213f03">
 
 
 
