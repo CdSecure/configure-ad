@@ -186,6 +186,51 @@ Click Save to apply the changes.
 <br />
 <img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/55cb1a34-e8f2-4ead-9061-a2c189056c5f">
 
+Disabling the Windows Firewall on the Domain Controller
+
+Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
+
+1. Log into the Domain Controller:
+
+- Use Remote Desktop Protocol (RDP) to connect to your Windows Server VM (the domain controller).
+- Enter the username and password you created earlier.
+- Note: Upon logging in, the Server Manager should automatically open. If it doesn't, verify that you are connected to the correct VM in Azure.
+
+2. Access the Windows Firewall Settings:
+
+- Click on the Start button at the bottom left corner.
+- Type Run in the search bar and select the Run application.
+- In the Run dialog box, type WF.MSC and press Enter. This will open the Windows Defender Firewall with
+Advanced Security window.
+
+3. Disable the Firewall for All Profiles:
+
+- In the left pane, right-click on Windows Defender Firewall with Advanced Security on Local Computer and select Properties.
+- You will see three tabs: Domain Profile, Private Profile, and Public Profile.
+- Domain Profile Tab:
+Set Firewall state to Off.
+- Private Profile Tab:
+Set Firewall state to Off.
+- Public Profile Tab:
+Set Firewall state to Off.
+
+This ensures the firewall is disabled across all network profiles.
+
+4. Apply the Changes:
+
+- Click OK to save the settings and close the properties window.
+
+<img width="1800" alt="Screenshot 2024-11-12 at 12 17 05 PM" src="https://github.com/user-attachments/assets/2822c696-e75f-4ad4-9357-2186bd06505e">
+
+<img width="1800" alt="Screenshot 2024-11-12 at 12 17 43 PM" src="https://github.com/user-attachments/assets/3645b4e0-9335-4959-b6f3-4ad1eeadf7c2">
+
+<img width="1800" alt="Screenshot 2024-11-12 at 12 17 58 PM" src="https://github.com/user-attachments/assets/58d6b87d-48a0-4c38-a614-2394418b8d78">
+
+<img width="1800" alt="Screenshot 2024-11-12 at 12 17 43 PM" src="https://github.com/user-attachments/assets/5b73a13c-b301-4b09-b9cf-c73736eb08f9">
+
+<img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/07796346-04f6-4112-a04c-60e7be4f8c98">
+
+
 
 
 
