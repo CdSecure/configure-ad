@@ -193,20 +193,27 @@ Now that the private IP address is set to static, we will log into the domain co
 1. Log into the Domain Controller:
 
 - Use Remote Desktop Protocol (RDP) to connect to your Windows Server VM (the domain controller).
+  
 - Enter the username and password you created earlier.
+  
 - Note: Upon logging in, the Server Manager should automatically open. If it doesn't, verify that you are connected to the correct VM in Azure.
 
 2. Access the Windows Firewall Settings:
 
 - Click on the Start button at the bottom left corner.
+  
 - Type Run in the search bar and select the Run application.
+  
 - In the Run dialog box, type WF.MSC and press Enter. This will open the Windows Defender Firewall with
+  
 Advanced Security window.
 
 3. Disable the Firewall for All Profiles:
 
 - In the left pane, right-click on Windows Defender Firewall with Advanced Security on Local Computer and select Properties.
+  
 - You will see three tabs: Domain Profile, Private Profile, and Public Profile.
+  
 - Domain Profile Tab:
 Set Firewall state to Off.
 - Private Profile Tab:
@@ -240,29 +247,45 @@ Steps:
 1. Retrieve the Domain Controller's Private IP Address:
 
 - Navigate to DC-1 in Azure:
+  
 - Go to the Azure portal and select your domain controller VM (DC-1).
+
 - Find the Private IP Address:
+  
 - In the Overview section or under Networking, locate the Private IP address.
+
 - Note down this IP address; you will need it for the next steps.
   
 2. Access the Client VM's Network Interface Settings:
 
 - Navigate to Client-1 in Azure:
+  
 - In the Azure portal, select your client VM (Client-1).
+  
 - Go to Networking Settings:
+  
 - In the left-hand menu, click on Networking under Settings.
+  
 - Access the Network Interface:
+  
 - Under the Network interface section, click on the name of the network interface associated with Client to open its settings.
   
 3. Configure DNS Server Settings:
 
 - Select DNS Servers:
+  
 - In the network interface settings, select DNS servers from the left-hand menu.
+  
 - Change DNS Server Configuration:
+
 - You will see that the DNS server is set to "Inherit from virtual network" by default.
+  
 - Change this setting to "Custom".
+  
 - Enter the Domain Controller's IP Address:
+  
 - In the DNS server field that appears, enter the private IP address of DC-1 that you noted earlier.
+  
 - This tells the client VM to use the domain controller as its DNS server.
   
 4. Save the Changes:
@@ -273,7 +296,9 @@ Steps:
 5. Restart the Client VM (Optional but Recommended):
 
 - Ensure Settings Take Effect:
+  
 - To make sure the new DNS settings are applied, you may need to restart the Client-1 VM.
+
 - In the Azure portal, select the client VM, click on Restart, and confirm when prompted.
 
 <img width="792" alt="Screenshot 2024-11-12 at 12 42 23 PM" src="https://github.com/user-attachments/assets/7407e83d-43e4-40c1-b06b-c6d23d61223e">
@@ -295,62 +320,99 @@ Steps:
 1. Obtain Client-1's Public IP Address:
 
 - Navigate to Client-1 in Azure:
+  
 - In the Azure portal, go to Virtual Machines and select Client-1.
+  
 - Copy the Public IP Address:
+
 - In the Overview section, locate the Public IP address.
+  
 - Copy this IP address for use in the RDP connection.
   
 2. Log into Client-1 via Remote Desktop Protocol (RDP):
 
 - Open RDP Client:
+  
 - On your local machine, open the Remote Desktop Connection application.
+  
 - Connect to Client-1:
+  
 - Enter Client-1's public IP address in the Computer field.
+  
 - Click Connect.
+  
 - Authenticate:
+  
 - Enter the username and password you created when setting up Client-1.
+  
 - Click OK to log in.
   
 3. Ping the Domain Controller's Private IP Address from Client-1:
 
 - Obtain DC-1's Private IP Address:
+  
 - In the Azure portal, select DC-1 (your domain controller VM).
+  
 - In the Overview or Networking section, locate and copy the Private IP address.
+  
 - Open PowerShell on Client-1:
+  
 - Click on the Start button (bottom-left corner) and type PowerShell.
+  
 - Open Windows PowerShell.
+  
 - Ping DC-1:
+  
 - In PowerShell, type the following command and press Enter:
+  
 - ping [DC-1's private IP address]
+  
 - Replace [DC-1's private IP address] with the actual IP (e.g., ping 10.0.0.4).
 <br/>
 - Verify Ping Results:
+  
 - Ensure that you receive 4 reply messages indicating successful communication.
+  
 - Successful Ping Example:
 - <img width="858" alt="Screenshot 2024-11-12 at 1 47 12 PM" src="https://github.com/user-attachments/assets/0a019ee3-d58b-4c8e-9ce9-7faee128d8a1">
 <br/>
 - Troubleshooting:
+  
 - If you do not receive replies (e.g., "Request timed out"):
+  
 - Check Network Configuration:
+  
 - Ensure both VMs are in the same Virtual Network (VNet) and appropriate subnets.
+  
 - Firewall Settings:
+  
 - Confirm that the Windows Firewall on DC-1 is disabled or allows ICMP (ping) requests.
+  
 - Refer back to the steps where the firewall was configured on DC-1.
   
 4. Verify DNS Settings on Client-1:
 
 - In PowerShell on Client-1:
+  
 - Type the following command and press Enter:
+  
 - ipconfig /all
+  
 - Review DNS Server Configuration:
+  
 - Look for the DNS Servers entry under the network adapter in use.
+  
 - Confirm DNS IP address:
 <img width="857" alt="Screenshot 2024-11-12 at 1 59 23 PM" src="https://github.com/user-attachments/assets/66f659d5-62d1-4b5a-89c0-dd889982640a">
 <br/>
 - Troubleshooting DNS Settings:
+  
 - If the DNS server IP does not match DC-1's private IP:
+  
 - Revisit the network interface settings for Client-1 in Azure.
+  
 - Ensure that the DNS server is set to Custom and the IP address is set to DC-1's private IP.
+  
 - Save any changes and restart Client-1 to apply the new settings.
 
 **Summary of Network Configuration and Traffic Observation**
