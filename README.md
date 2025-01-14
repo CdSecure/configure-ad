@@ -25,16 +25,7 @@ In this exercise, we will create a resource group containing a virtual network w
 
 <h2>Deployment and Configuration Steps</h2>
 
-<p>
-
-</p>
-<br />
-
-<p>
-
-</p>
-<p>
-Creating a Resource Group in Microsoft Azure
+<b>Creating a Resource Group in Microsoft Azure </b>
 
 Open the Azure Portal:
 
@@ -48,9 +39,9 @@ Subscription: Ensure the correct subscription is selected.
 
 - Resource Group Name: Enter a meaningful name for your resource group.
   
-- Region: I choose US West 2 as the region for this exercise.
+- Region: I chose US West 2 as the region for this exercise.
   
-- Click Review + Create, then click Create to finalize the resource group creation.
+- Click Review + Create, then click create to finalize the resource group creation.
 
 <img width="689" alt="Screenshot 2024-11-08 at 3 36 43 PM" src="https://github.com/user-attachments/assets/51b72541-ce24-4a68-8a57-d1f895818bed">
 
@@ -58,7 +49,7 @@ Subscription: Ensure the correct subscription is selected.
 
 <img width="755" alt="Screenshot 2024-11-08 at 3 55 51 PM" src="https://github.com/user-attachments/assets/87da4a9e-315a-4223-808b-c234f2d27f1a">
 
-Creating a Virtual Machine (VM) in Azure
+<b>Creating a Virtual Machine (VM) in Azure</b>
 
 We will now create our virtual machine (VM) within the resource group and virtual network (VNet) we previously set up.
 
