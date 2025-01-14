@@ -178,7 +178,7 @@ Click Save to apply the changes.
 <br />
 <img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/55cb1a34-e8f2-4ead-9061-a2c189056c5f">
 
-Disabling the Windows Firewall on the Domain Controller
+<b>Disabling the Windows Firewall on the Domain Controller</b>
 
 Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
 
