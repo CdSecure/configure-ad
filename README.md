@@ -138,7 +138,7 @@ VM Name: Choose a name for your Windows 10 VM.
 
 <img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/4bfe1db6-9fd3-4d76-9428-e36f251640e5">
 
-Setting the Domain Controller's Private IP Address to Static
+<b>Setting the Domain Controller's Private IP Address to Static</b>
 
  After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
 
