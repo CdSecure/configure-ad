@@ -139,7 +139,7 @@ Now that the domain controller (Windows Server) is set up, create a Windows 10 V
 
 <b>&#9315;Setting the Domain Controller's Private IP Address to Static</b>
 
- 4) After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
+After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
 
 1. Navigate to the Domain Controller VM:
 
