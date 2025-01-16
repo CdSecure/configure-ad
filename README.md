@@ -24,9 +24,9 @@ In this exercise, we will create a resource group containing a virtual network w
 
 <h2>Deployment and Configuration Steps</h2>
 
-<b>Creating a Resource Group in Microsoft Azure </b>
+<b>&#9312;Creating a Resource Group in Microsoft Azure </b>
 
-&#9312; Open the Azure Portal:
+Open the Azure Portal:
 
 - Navigate to the Microsoft Azure portal and sign in with your credentials.
 Create a New Resource Group:
@@ -48,9 +48,9 @@ Subscription: Ensure the correct subscription is selected.
 
 <img width="755" alt="Screenshot 2024-11-08 at 3 55 51 PM" src="https://github.com/user-attachments/assets/87da4a9e-315a-4223-808b-c234f2d27f1a">
 
-<b>Creating a Virtual Machine (VM) in Azure</b>
+<b>&#9313;Creating a Virtual Machine (VM) in Azure</b>
 
-2) We will now create our virtual machine (VM) within the resource group and virtual network (VNet) we previously set up.
+We will now create our virtual machine (VM) within the resource group and virtual network (VNet) we previously set up.
 
 1. Navigate to Virtual Machines:
 
@@ -97,9 +97,9 @@ Review and Create:
 <br />
 <img width="1182" alt="Screenshot 2024-11-08 at 4 17 45 PM" src="https://github.com/user-attachments/assets/45af1317-6db7-4ed7-97b1-efb717ed52ba">
 
-<b>Creating the Windows 10 Virtual Machine</b>
+<b>&#9314;Creating the Windows 10 Virtual Machine</b>
 
-3) Now that the domain controller (Windows Server) is set up, create a Windows 10 VM in the same resource group and region:
+Now that the domain controller (Windows Server) is set up, create a Windows 10 VM in the same resource group and region:
 
 1. Start VM Creation:
 
@@ -137,7 +137,7 @@ Review and Create:
 
 <img width="991" alt="Screenshot 2024-11-08 at 4 41 46 PM" src="https://github.com/user-attachments/assets/4bfe1db6-9fd3-4d76-9428-e36f251640e5">
 
-<b>Setting the Domain Controller's Private IP Address to Static</b>
+<b>&#9315;Setting the Domain Controller's Private IP Address to Static</b>
 
  4) After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
 
@@ -176,7 +176,7 @@ Review and Create:
 <br />
 <img width="592" alt="Screenshot 2024-11-12 at 11 37 00 AM" src="https://github.com/user-attachments/assets/55cb1a34-e8f2-4ead-9061-a2c189056c5f">
 
-<b>Disabling the Windows Firewall on the Domain Controller</b>
+<b>&#9316;Disabling the Windows Firewall on the Domain Controller</b>
 
 5) Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
 
