@@ -21,7 +21,7 @@ Welcome to the first project in our Azure and Active Directory tutorial series. 
 
 <h2>High-Level Deployment and Configuration </h2>
 
-In this exercise, we will create a resource group containing a virtual network with two subnets. One subnet will host a Windows Server configured as a domain controller, and the other will host a Windows 10 client machine. We will then configure the Windows 10 computer to join the domain controlled by the Windows Server, allowing us to log in as a domain user.
+In this exercise, we will create a resource group containing a virtual network with two subnets. One subnet will host a Windows Server configured as a domain controller, and the other will host a Windows 10 client machine. We will then configure the Windows 10 computer to join the domain controller allowing us to log in as a domain user.
 
 <h2>Deployment and Configuration Steps</h2>
 
