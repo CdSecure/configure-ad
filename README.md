@@ -6,8 +6,6 @@
 
 Welcome to the first project in our Azure and Active Directory tutorial series. This foundational setup creates a simple lab environment in Azure, simulating a typical enterprise AD deployment. We’ll lay the groundwork needed for exploring how Active Directory is implemented and managed in real-world scenarios.
 
-
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -28,7 +26,7 @@ In this exercise, we will create a resource group containing a virtual network w
 
 <b>Creating a Resource Group in Microsoft Azure </b>
 
-1) Open the Azure Portal:
+&#9312; Open the Azure Portal:
 
 - Navigate to the Microsoft Azure portal and sign in with your credentials.
 Create a New Resource Group:
@@ -52,13 +50,13 @@ Subscription: Ensure the correct subscription is selected.
 
 <b>Creating a Virtual Machine (VM) in Azure</b>
 
-We will now create our virtual machine (VM) within the resource group and virtual network (VNet) we previously set up.
+2) We will now create our virtual machine (VM) within the resource group and virtual network (VNet) we previously set up.
 
 1. Navigate to Virtual Machines:
 
 - In the Azure portal, search for Virtual Machines and select it.
   
-- Click on Add to start the VM creation process.
+- Click on add to start the VM creation process.
 
 2. Configure Basic Settings:
 
@@ -99,9 +97,9 @@ Review and Create:
 <br />
 <img width="1182" alt="Screenshot 2024-11-08 at 4 17 45 PM" src="https://github.com/user-attachments/assets/45af1317-6db7-4ed7-97b1-efb717ed52ba">
 
-Creating the Windows 10 Virtual Machine
+<b>Creating the Windows 10 Virtual Machine</b>
 
-Now that the domain controller (Windows Server) is set up, create a Windows 10 VM in the same resource group and region:
+3) Now that the domain controller (Windows Server) is set up, create a Windows 10 VM in the same resource group and region:
 
 1. Start VM Creation:
 
@@ -109,13 +107,13 @@ Now that the domain controller (Windows Server) is set up, create a Windows 10 V
 
 - Click Add to begin creating a new VM.
 
-
 2. Configure Basics:
 
 - Resource Group: Select the same one used for the domain controller.
 
 - Region: Ensure it's the same as the domain controller's region.
-VM Name: Choose a name for your Windows 10 VM.
+
+- VM Name: Choose a name for your Windows 10 VM.
 
 - Image: Select Windows 10 Pro.
   
@@ -141,7 +139,7 @@ VM Name: Choose a name for your Windows 10 VM.
 
 <b>Setting the Domain Controller's Private IP Address to Static</b>
 
- After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
+ 4) After creating the domain controller, we need to set its virtual network interface card (NIC) private IP address to static:
 
 1. Navigate to the Domain Controller VM:
 
@@ -160,17 +158,16 @@ VM Name: Choose a name for your Windows 10 VM.
 4. Modify IP Configuration:
 
 - In the network interface settings, select IP configurations from the left-hand menu.
-- You will see the IP configuration labeled ipconfig1 (or similar). Click on it to edit.
+- You will see the IP configuration labeled ipconfig1. Click on it to edit.
   
 5. Change IP Assignment to Static:
 
 - Under Private IP address settings, you will see Assignment set to Dynamic.
 - Change the Assignment from Dynamic to Static.
-- Ensure the IP address field retains the current IP or adjust it as needed.
   
 6. Save Changes:
+- Click Save to apply the changes.
 
-Click Save to apply the changes.
 <img width="1053" alt="Screenshot 2024-11-12 at 11 35 50 AM" src="https://github.com/user-attachments/assets/2d251fb7-415c-44b1-95e4-411e106b9c47">
 <br />
 <img width="1059" alt="Screenshot 2024-11-12 at 11 36 14 AM" src="https://github.com/user-attachments/assets/052c53b5-3ce2-4c17-a6f6-766b73efe4a6">
@@ -181,7 +178,7 @@ Click Save to apply the changes.
 
 <b>Disabling the Windows Firewall on the Domain Controller</b>
 
-Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
+5) Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
 
 1. Log into the Domain Controller:
 
@@ -197,9 +194,7 @@ Now that the private IP address is set to static, we will log into the domain co
   
 - Type Run in the search bar and select the Run application.
   
-- In the Run dialog box, type WF.MSC and press Enter. This will open the Windows Defender Firewall with
-  
-Advanced Security window.
+- In the Run dialog box, type WF.MSC and press Enter. This will open the Windows Defender Firewall with Advanced Security window.
 
 3. Disable the Firewall for All Profiles:
 
@@ -231,11 +226,9 @@ This ensures the firewall is disabled across all network profiles.
 
 <img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/eb109ec5-4b47-4d9f-8c37-28c6d1213f03">
 
-Configuring the Client VM to Use the Domain Controller's Private IP Address as Its DNS Server
+<b>Configuring the Client VM to Use the Domain Controller's Private IP Address as Its DNS Server</b>
 
-We will now configure the client VM (the second VM) to use the domain controller's (DC-1's) private IP address as its DNS server. This is essential for the client VM to locate and join the domain controlled by DC-1.
-
-Steps:
+6) We will now configure the client VM (the second VM) to use the domain controller's (DC-1's) private IP address as its DNS server. This is essential for the client VM to locate and join the domain controlled by DC-1.
 
 1. Retrieve the Domain Controller's Private IP Address:
 
