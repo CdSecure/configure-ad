@@ -178,7 +178,7 @@ Now that the domain controller (Windows Server) is set up, create a Windows 10 V
 
 <b>&#9316;Disabling the Windows Firewall on the Domain Controller</b>
 
-5) Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
+Now that the private IP address is set to static, we will log into the domain controller and disable the Windows Firewall.
 
 1. Log into the Domain Controller:
 
@@ -226,9 +226,9 @@ This ensures the firewall is disabled across all network profiles.
 
 <img width="396" alt="Screenshot 2024-11-12 at 12 22 13 PM" src="https://github.com/user-attachments/assets/eb109ec5-4b47-4d9f-8c37-28c6d1213f03">
 
-<b>Configuring the Client VM to Use the Domain Controller's Private IP Address as Its DNS Server</b>
+<b>&#9317;Configuring the Client VM to Use the Domain Controller's Private IP Address as Its DNS Server</b>
 
-6) We will now configure the client VM (the second VM) to use the domain controller's (DC-1's) private IP address as its DNS server. This is essential for the client VM to locate and join the domain controlled by DC-1.
+We will now configure the client VM (the second VM) to use the domain controller's (DC-1's) private IP address as its DNS server. This is essential for the client VM to locate and join the domain controlled by DC-1.
 
 1. Retrieve the Domain Controller's Private IP Address:
 
@@ -298,11 +298,10 @@ This ensures the firewall is disabled across all network profiles.
 
 <img width="957" alt="Screenshot 2024-11-12 at 1 28 45 PM" src="https://github.com/user-attachments/assets/68498027-ca0c-4be7-8255-3e7b471abc9a">
 
-Verifying Connectivity Between Client-1 and the Domain Controller (DC-1)
+<b>&#9318;Verifying Connectivity Between Client-1 and the Domain Controller (DC-1)</b>
 
 Now that the domain controller (DC-1) has restarted, we will log into Client-1 and verify connectivity by pinging the domain controller's private IP address. We will also confirm that the DNS settings on Client-1 are correctly configured to use DC-1's private IP address.
 
-Steps:
 1. Obtain Client-1's Public IP Address:
 
 - Navigate to Client-1 in Azure:
@@ -354,15 +353,16 @@ Steps:
 - ping [DC-1's private IP address]
   
 - Replace [DC-1's private IP address] with the actual IP (e.g., ping 10.0.0.4).
-<br/>
-- Verify Ping Results:
+  
+4. Verify Ping Results:
   
 - Ensure that you receive 4 reply messages indicating successful communication.
   
 - Successful Ping Example:
-- <img width="858" alt="Screenshot 2024-11-12 at 1 47 12 PM" src="https://github.com/user-attachments/assets/0a019ee3-d58b-4c8e-9ce9-7faee128d8a1">
+
+<img width="858" alt="Screenshot 2024-11-12 at 1 47 12 PM" src="https://github.com/user-attachments/assets/0a019ee3-d58b-4c8e-9ce9-7faee128d8a1">
 <br/>
-- Troubleshooting:
+5. Troubleshooting:
   
 - If you do not receive replies (e.g., "Request timed out"):
   
@@ -376,7 +376,7 @@ Steps:
   
 - Refer back to the steps where the firewall was configured on DC-1.
   
-4. Verify DNS Settings on Client-1:
+6. Verify DNS Settings on Client-1:
 
 - In PowerShell on Client-1:
   
@@ -391,7 +391,8 @@ Steps:
 - Confirm DNS IP address:
 <img width="857" alt="Screenshot 2024-11-12 at 1 59 23 PM" src="https://github.com/user-attachments/assets/66f659d5-62d1-4b5a-89c0-dd889982640a">
 <br/>
-- Troubleshooting DNS Settings:
+
+7. Troubleshooting DNS Settings:
   
 - If the DNS server IP does not match DC-1's private IP:
   
