@@ -82,7 +82,7 @@ Password: Set a secure password and keep it accessible for future login.
 
 - Subnet: Confirm that the VM is placed in the appropriate subnet within the VNet.
   
-Review and Create:
+4. Review and Create:
 
 - Review all the configurations to ensure they are correct.
 - Click on Review + Create and then Create to deploy the VM.
