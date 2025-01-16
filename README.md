@@ -28,7 +28,7 @@ In this exercise, we will create a resource group containing a virtual network w
 
 <b>Creating a Resource Group in Microsoft Azure </b>
 
-Open the Azure Portal:
+1) Open the Azure Portal:
 
 - Navigate to the Microsoft Azure portal and sign in with your credentials.
 Create a New Resource Group:
